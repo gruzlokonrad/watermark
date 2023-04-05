@@ -4,6 +4,8 @@
   "main": "app.mjs",
   "license": "MIT",
   "dependencies": {
+    "imagemin": "^8.0.1",
+    "imagemin-pngquant": "^9.0.2",
     "inquirer": "^9.1.4",
     "jimp": "^0.22.5"
   }

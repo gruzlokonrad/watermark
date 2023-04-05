@@ -2,6 +2,8 @@ import { stat } from 'node:fs';
 import inquirer from 'inquirer'
 import generateImageWatermark from './helpers/generateImageWatermark.mjs'
 import generateTextWatermark from './helpers/generateTextWatermark.mjs'
+import convertImage from './utils/convertImage.mjs'
+import compressPNG from './utils/compressPNG.mjs';
 
 const startApp = async () => {
   console.clear()
@@ -51,4 +53,36 @@ const startApp = async () => {
     }
   });
 }
-startApp();
+// startApp();
+
+
+
+const runConvert = (folderNames) => {
+  folderNames.forEach(name => {
+    // CONVERT
+    // convertImage(name, 'jpg', 'png')
+    // convertImage(`${name}/realization`, 'jpg', 'png')
+    
+    // COMPRESS
+    // compressPNG(name)
+    // compressPNG(`${name}/realization`)
+  })
+}
+
+runConvert([
+  'Golvrenovering',
+  'Golvslipning',
+  'Hetaarbeten',
+  'Husgrund-H',
+  'HyraGravmaskin',
+  'Koksrenovering',
+  'Lagenhetsrenovering',
+  'Lastbil_transporter',
+  'Malning',
+  'Markarbeten',
+  'Platmastare',
+  'Pooler',
+  'Takrenovering',
+  'Tillbygnad',
+  'Totalenterprenad',
+])
