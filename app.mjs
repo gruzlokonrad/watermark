@@ -2,8 +2,6 @@ import { stat } from 'node:fs';
 import inquirer from 'inquirer'
 import generateImageWatermark from './helpers/generateImageWatermark.mjs'
 import generateTextWatermark from './helpers/generateTextWatermark.mjs'
-import convertImage from './utils/convertImage.mjs'
-import compressPNG from './utils/compressPNG.mjs';
 
 const startApp = async () => {
   console.clear()
