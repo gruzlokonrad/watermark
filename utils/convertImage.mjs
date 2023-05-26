@@ -1,8 +1,8 @@
 import Jimp from "jimp";
 import * as fs from "fs";
 
-const convertImage = async (folderName, inputExt, outputExt) => {
-  const folderPath = '/Users/konradgruzlo/Documents/dev/GitLab/artas/public/services/' + folderName
+const convertImage = async (folderPath, inputExt, outputExt) => {
+  // const folderPath = '/Users/konradgruzlo/Documents/dev/GitLab/artas/public/services/' + folderName
   try {
     if (fs.existsSync(folderPath)) {
       await fs.readdirSync(folderPath).map(fileName => {
@@ -19,7 +19,6 @@ const convertImage = async (folderName, inputExt, outputExt) => {
           })
         }
       })
-      console.log(`${folderName}: DONE!`)
     } else {
       console.warn("Folder does not exist");
     }
