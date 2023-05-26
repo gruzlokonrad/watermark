@@ -1,5 +1,3 @@
-import { stat } from 'node:fs';
-import inquirer from 'inquirer'
 import convertImage from './utils/convertImage.mjs';
 import compressPNG from './utils/compressPNG.mjs';
 
